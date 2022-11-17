@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <title>P5 Calendar</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="uploadLog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Jost:ital@0;1&family=Kdam+Thmor+Pro&family=Macondo&family=Poppins:ital,wght@0,300;0,400;0,500;1,200&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/5429a7e2cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar">something</span>
+          <span class="icon-bar">else</span>
+          <span class="icon-bar">here</span>
+        </button>
+        <a href="/profile"><img id="hat" src="img/hat1.png" class="tinypic"></img></a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/uploadLog">Upload Log</a>
+          </li>
+          <li>
+            <a href="/ourProfile">Our Logs</a>
+          </li>
+          <li><a href="/logout">Log Out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<div class="logBook">
+<div class="logBookLeft">
+<div class="mt-5">
+  <h2>Daily log:</h2>
+  <form action="/postLog" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Date</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="author" class="form-label">Time of Day</label>
+      <input type="text" class="form-control" id="author" name="author" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="bg" class="form-label" >Activity(s)</label>
+      <textarea class="form-control" id="bg" name="bg" required placeholder="What did you do during this time?"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="ingredients" class="form-label">Confidant / Social Stat boosts:</label>
+      <textarea class="form-control" id="ingredients" name="ingredients" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="instructions" class="form-label">Other:</label>
+      <textarea class="form-control" id="instructions" name="instructions" required></textarea>
+    </div> 
+    <button type="submit" class="button-45" value="Upload">Submit</button>
+  </form>
+</div>
+</div>
+
+<div class="logBookRight">
+
+  <% for(let i=0; i<logs.length; i++){%>  
+  <%if (user.local.email == logs[i].logUserEmail) {%>
+
+    <div class="logHere">
+      <i class="fa-solid fa-trash-can trashCan"></i>
+      <span class="hidden"><%= logs[i]._id %></span>
+      <h3><%= logs[i].title %></h3>
+
+      <span>Time of Day: </span><span><%= logs[i].author %></span>
+      <br><br>
+      <span>Activity(s) </span><p><%= logs[i].bg %></p>
+      <span>Confidant / Social Stat Boosts: </span><p><%= logs[i].ingredients %></p>
+      <span>Other </span><p><%= logs[i].instructions %></p>
+    </div>
+  <%}%> 
+  <%}%> 
+  <!-- <button class="rightButton">Next Log</button> -->
+</div>
+</div>
+<footer><img id="foot" src="img/start2.gif" alt=""/></footer>
+<script src="main.js"></script>
+
+</body>
+</html>
+
+
+
+
+

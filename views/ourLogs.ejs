@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>P5 Calendar</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="ourLogs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Jost:ital@0;1&family=Kdam+Thmor+Pro&family=Macondo&family=Poppins:ital,wght@0,300;0,400;0,500;1,200&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5429a7e2cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar">something</span>
+          <span class="icon-bar">else</span>
+          <span class="icon-bar">here</span>
+        </button>
+        <a href="/profile"><img id="hat" src="img/hat1.png" class="tinypic"></img></a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/uploadLog">Upload Log</a>
+          </li>
+          <li>
+            <a href="/ourProfile">Our Logs</a>
+          </li>
+          <li><a href="/logout">Log Out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<div class="logBook">
+  <div class="logBookLeft">
+    <p class="introP">Our Logs is a collective log book created by all of you! </p>
+    <p class="introP">Click the button to generate a random log by a fellow Family Logs user. :-)</p>
+    <button class="randomButton">Random Log</button>
+  </div>
+  <div class="logBookRight">
+    
+    <h3><%= log.title %></h3>
+    <span>By: </span><span><%= log.author %></span>
+    <br><br>
+    <span>Background Story: </span><p><%= log.bg %></p>
+    <span>Ingredients: </span><p><%= log.ingredients %></p>
+    <span>Instructions: </span><p><%= log.instructions %></p>
+  </div>
+</div>
+<footer><img id="foot" src="img/start2.gif" alt=""/></footer>
+<script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+

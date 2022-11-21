@@ -20,6 +20,8 @@ button {
   touch-action: manipulation;
   white-space: nowrap;
   word-break: break-word;
+  font-style: italic;
+  font-weight: bold;
 }
 
 button:active,
@@ -28,7 +30,7 @@ button-45:focus {
   outline: 0;
 }
 .log {
-  color: rgb(156, 154, 156);
+  color: white;
 }
 
 
@@ -39,8 +41,7 @@ button:active {
 }
 
 button:hover {
-  background-color: #FFE3E3;
-  border-color: #FAA4A4;
+  background-color: rgb(254, 42, 19);
 }
 
 button:active:hover,
@@ -51,20 +52,45 @@ box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
 color: #FFFFFF;
 }
 
+.signButton {
+  margin-top: 1em;
+  background-image: url(/img/HOME_signup.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 75px;
+  width: 300px;
+  background-color: transparent;
+  border: none;
+}
+
+.logButton {
+  margin-top: 1em;
+  background-image: url(/img/HOME_login.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 75px;
+  width: 300px;
+  background-color: transparent;
+  border: none;
+}
+
 a {
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: 'Arsenal', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   text-decoration:none;
 }
 
 p {
   font-size: 2rem;
-  padding-top: 1em;
 }
 
 .form-group {
   padding-bottom: .5em;
   font-size: 1.6em;
-  color: rgb(156, 154, 156);
+  color: white;
 }
 
 label {
@@ -73,7 +99,7 @@ label {
 
 h1 {
   padding-top: 1em;
-  color: rgb(156, 154, 156);
+  color: white;
 }
 
 input {

@@ -3,7 +3,9 @@
 }
 
 .navbar .nav {
-  font-family: "Josefin Sans", "Poppins", "Futura", "sans-serif";
+  font-family: 'Arsenal', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1.2rem
@@ -47,9 +49,9 @@
   background-image: none;
 }
 
-.navbar-inverse {
+/* .navbar-inverse {
   border-color: rgb(198, 43, 41)
-}
+} */
 
 .navbar-inverse .navbar-brand {
   color: #FFFFFF
@@ -106,20 +108,28 @@
 }
 
 #calendar{
-  background: rgb(198, 43, 41);
+  /* background: rgb(198, 43, 41); */
   background-image: url(img/arsene.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 50%;
   padding-top: 8%;
+  padding-bottom: 20%;
 }
 
 #hat {
   margin-top: 20px;
-  width: 100px;
+  width: 200px;
+  padding-bottom: 20px;
 }
 
 #foot {
   width: 25%;
 }
 
+body {
+  background: url(img/HOME_GRADIENT_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0%;
+}

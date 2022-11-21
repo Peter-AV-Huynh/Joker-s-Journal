@@ -3,31 +3,39 @@
 }
 
 body{
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: 'Arsenal', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   text-align: center;
-  background: black;
+  background: url(img/HOME_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border: 0;
   margin: 0;
+  padding-bottom: 13%;
 }
 .firstGif{
   border: 0;
   margin: 0;
 }
-.container {
+/* .container {
   background: black;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 30px;
   margin-bottom: 30px;
-}
+} */
 
 h1 {
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: 'Arsenal', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   padding-bottom: 2em;
 }
 
 p {
-  color: rgb(156, 154, 156);
+  color: white;
   font-size: 3rem;
 }
 
@@ -40,7 +48,6 @@ p {
   margin-top: 50px;
   margin-bottom: 30px;
   margin-left: 50%;
-  border: 20px solid black;
 }
 
 .homeLinks {
@@ -71,3 +78,59 @@ footer {
 button {
   background-color: black;
 }
+
+#logpng {
+  width: 18%;
+  min-width: 80px;
+}
+
+#signpng {
+  min-width: 150px;
+  width: 20%;
+}
+
+#homeText {
+  width: 50%;
+  min-width: 400px;
+  padding-top: 17%;
+}
+
+#logSign {
+  background: url(img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 0;
+  margin: 0;
+  padding-bottom: 13%;
+  text-align: center;
+}
+
+#formOne {
+  background: url(img/background_rectangle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: 0;
+  margin: 0;
+  padding: 16%;
+  min-width: 450px;
+  text-align: center;
+}
+
+#formTwo {
+  background: url(img/chat_box.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: 0;
+  margin: 0;
+  padding: 20%;
+  min-width: 450px;
+  text-align: center;
+}
+
+.formTwoTextContainer {
+  margin-top: 12%;
+}
+

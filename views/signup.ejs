@@ -1,26 +1,29 @@
 <!doctype html>
 <html>
 <head>
-    <title>P5 Calendar</title>
+    <title>Joker's Journal</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header><a href="/profile"><img class="firstGif" src="img/first.jpg" alt="opening banner"/></a></header>
+<body id="logSign">
+    <!-- <header><a href="/profile"><img class="firstGif" src="img/first.jpg" alt="opening banner"/></a></header> -->
 <div class="container">
 <div class="col-sm-6 col-sm-offset-3">
 
-    <h1>Sign Up</h1>
+    <h1></h1>
 
     <% if (message.length > 0) { %>
         <div class="alert alert-danger"><%= message %></div>
     <% } %>
 
     <!-- LOGIN FORM -->
-    <form action="/signup" method="post">
+    <form id="formOne" action="/signup" method="post">
         <div class="form-group">
             <label>Name</label>
             <input type="text" class="form-control" name="name" required>
@@ -34,16 +37,20 @@
             <input type="password" class="form-control" name="password" required>
         </div>
 
-        <button type="submit">Sign Up</button>
+        <button class="signButton" type="submit"></button>
     </form>
 
-    <hr>
-
-    <p>Already have an account? <a href="/login" class="log">Log In</a></p>
-    <p>Or go <a href="/" class="log">home</a>.</p>
+    <div id="formTwo">
+        <div class="formTwoTextContainer">
+            <p>
+                Already have an account? <a href="/login" class="log">Log In</a>
+                <br/>
+                Or go <a href="/" class="log">home</a>.
+            </p>
+        </div>
+    </div>
 
 </div>
 </div>
-<img src="img/start2.gif" alt=""/>
 </body>
 </html>

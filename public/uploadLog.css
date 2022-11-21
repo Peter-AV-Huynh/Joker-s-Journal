@@ -3,8 +3,10 @@
 }
 
 body{
-  font-family: "Josefin Sans", "Poppins", "Futura", "sans-serif";
-  text-align: center;
+  font-family: 'Arsenal', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
   background-color: black;
   padding-bottom: 5em;
 }
@@ -14,7 +16,7 @@ body{
   margin-top: 4em;
   width: 100%;
   height: 1000px;
-  background-image: url("/img/book-open.webp");
+  background-image: url("/img/notebook_bg.png");
   background-repeat: no-repeat;
   background-position:center;
   background-size: 100%;
@@ -27,27 +29,55 @@ body{
 }
 
 .logBookLeft{
+  position: relative;
   width: 40%;
   height: 90%;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0px 60px;
-  
+  top: 20%;
 }
 
 .logBookRight {
+  position: relative;
   width: 38%;
   overflow-x: hidden;
   overflow-y: auto;
   height: 90%;
   padding: 0px 70px;
+  top: 20%;
+}
+
+.logForm {
+  vertical-align: center;
+}
+
+.log-form-label-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.log-form-label {
+  text-align: left;
+  justify-content: left;
+  border-width: 3px;
+}
+
+.form-control {
+  text-align: left;
+}
+
+.log-entry {
+  text-align: left;
 }
 
 li {
   list-style-type: none;
 }
 .homeLinks {
-  text-align: center;
+  text-align: left;
   font-size: 2em;
 }
 a {
@@ -58,6 +88,8 @@ p {
   font-size: 18px;
   padding-bottom: .75em;
   padding-top: .5em;
+  text-align: left;
+  color: rgb(207, 108, 107);
 }
 
 label {
@@ -65,54 +97,39 @@ label {
   margin-top: 1em;
 }
 
-  button {
-    margin-top: 1em;
-    background-color: #FFE7E7;
-    background-position: 0 0;
-    border: 1px solid #FEE0E0;
-    border-radius: 11px;
-    box-sizing: border-box;
-    color: rgb(52, 78, 129);
-    cursor: pointer;
-    font-size: 1.75rem;
-    line-height: 33.4929px;
-    padding: 2px 12px;
-    text-align: left;
-    text-decoration: none;
-    text-shadow: none;
-    text-underline-offset: 1px;
-    transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    word-break: break-word;
-  }
+.button-45 {
+  margin-top: 1em;
+  background-image: url(/img/submit_button.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 45px;
+  width: 180px;
+  background-color: transparent;
+  border: none;
+}
   
   button:active,
   button-:hover,
   button-45:focus {
     outline: 0;
   }
+
+  .button-45 {
+  }
   
   
   button:active {
-    background-color: #365ca4;
-    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
-    color: #FFFFFF;
+ 
   }
   
   button:hover {
-    background-color: #FFE3E3;
-    border-color: #FAA4A4;
+    background-color: rgb(231, 231, 231);
   }
 
 button:active:hover,
 button:focus:hover,
 button:focus {
-  background-color: rgb(156, 184, 240);
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
-  color: #FFFFFF;
 }
 
 .logHere {
@@ -142,7 +159,13 @@ h2 {
 h3 {
   padding-bottom: .25em;
   font-weight: bold;
-  color:black;
+  color:rgb(207, 108, 107);
+  text-align: center;
+}
+
+.bigFont {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 4rem;
 }
 
 .form-control {

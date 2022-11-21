@@ -147,10 +147,10 @@ app.get('/ourLogs', isLoggedIn, function(req, res) {
       db.collection('logs').save({
         // user: req.body.local.email,
         title: req.body.title, 
-        author: req.body.author, 
+        time: req.body.time, 
         bg: req.body.bg, 
-        ingredients: req.body.ingredients, 
-        instructions: req.body.instructions, 
+        boost: req.body.boost, 
+        other: req.body.other, 
         logUser: req.user._id,
         logUserEmail: req.user.local.email
       }, (err, result) => {

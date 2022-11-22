@@ -43,9 +43,9 @@ body{
   width: 38%;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 90%;
+  height: 70%;
   padding: 0px 70px;
-  top: 20%;
+  top: 10%;
 }
 
 .logForm {

@@ -28,12 +28,20 @@
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav navbar-right">
           <li>
+            <a href="/followedLog">Followed Logs</a>
+          </li>
+          <!-- <li>
+            <a href="/notifications">Notifications</a>
+          </li> -->
+          <li>
             <a href="/uploadLog">My Journal</a>
           </li>
           <li>
             <a href="/ourProfile">Global Journal</a>
           </li>
-          <li><a href="/logout">Sign Out</a></li>
+          <li>
+            <a href="/logout">Sign Out</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -46,12 +54,15 @@
     <button class="randomButton"></button>
   </div>
   <div class="logBookRight">
-    
+    <h2 class="logLabel"><button class="followButton">Follow!</button></h2><p></p>
+    <div id="user_id" style="display: none;"><%= log.logUser %></div>
+    <p><%= log.logUserEmail %></p>
     <h3 class="bigFont"><%= log.title %></h3>
     <span class="logLabel">Time of Day: </span><p><%= log.time %></p>
     <span class="logLabel">Activity(s) </span><p><%= log.bg %></p>
     <span class="logLabel">Confidant / Social Stat Boosts: </span><p><%= log.boost %></p>
     <span class="logLabel">Other: </span><p><%= log.other %></p>
+    
   </div>
 </div>
 <script src="main.js"></script>

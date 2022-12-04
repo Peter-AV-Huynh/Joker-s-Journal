@@ -19,3 +19,13 @@ Array.from(trash).forEach(function (element) {
 document?.querySelector(".randomButton")?.addEventListener("click", function () {
   window.location.reload();
 });
+
+document?.querySelector(".followButton")?.addEventListener("click", function () {
+  fetch("follows", {
+    method: "post",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      followed_id: document.querySelector("#user_id").innerText,
+    }),
+  })
+});

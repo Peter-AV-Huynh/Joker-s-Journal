@@ -46,6 +46,21 @@
 </header>
 <div id="calendar">
   <a href="/ourLogs"><img class="bookFront" src="img/GLOBAL_LOG.png"></a>
+  <ul>
+    <% for(let i=0; i<notifications.length; i++){%>  
+      <%if (notifications.length > 0) {%>
+    
+        <li>
+          <%= notifications[i].message %>
+          <div>
+            <%if (!!notifications[i].timestamp) {%>
+              <%= notifications[i].timestamp.toString() %>
+              <%}%>
+          </div>
+        </li>
+      <%}%>
+      <%}%>
+    </ul>
 </div>
 <script src="main.js"></script>
 

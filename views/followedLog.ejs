@@ -81,12 +81,11 @@
 <div class="logBookRight">
 
   <% for(let i=0; i<logs.length; i++){%>  
-  <%if (user.local.email == logs[i].logUserEmail) {%>
 
     <div class="logHere">
-      <i class="fa-solid fa-trash-can trashCan"></i>
       <span class="hidden"><%= logs[i]._id %></span>
       <div class="log-entry">
+        <p><%= logs[i].logUserEmail %></p>
         <h3 class="bigFont"><%= logs[i].title %></h3>
         <span>Time of Day: </span><p><%= logs[i].time %></p>
         <span>Activity(s): </span><p><%= logs[i].bg %></p>
@@ -94,7 +93,6 @@
         <span>Other: </span><p><%= logs[i].other %></p>
       </div>
     </div>
-  <%}%> 
   <%}%> 
   <!-- <button class="rightButton">Next Log</button> -->
 </div>

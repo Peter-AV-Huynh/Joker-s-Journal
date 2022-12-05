@@ -167,6 +167,18 @@ header {
   border: none;
 }
 
+.followButton {
+  margin-top: 1em;
+  background-image: url(/img/Follow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 45px;
+  width: 180px;
+  background-color: transparent;
+  border: none;
+}
+
 p {
   font-size: 18px;
   padding-bottom: .75em;
@@ -182,4 +194,10 @@ p {
 
 .logLabel {
   text-align: left;
+}
+
+.userEmail {
+  color: black;
+  text-decoration: underline;
+  font-size: 2.5rem;
 }

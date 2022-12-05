@@ -45,38 +45,11 @@
     </div>
   </header>
 
-<div class="logBook">
-<div class="logBookLeft">
-<div class="logForm">
-  <form action="/postLog" method="POST">
-    <div class="log-form-label-container">
-        <label for="title" class="log-form-label">Date</label>
-        <input type="text" class="form-control" id="title" name="title" required>
+  <div class="logBook">
+    <div class="logBookLeft">
+      <p class="introP" id="followedUsers"> LOOKING COOL, JOKER!</p>
+      <p class="introP" id="followedUsers"> Check out the entries from your followed users!</p>
     </div>
-
-    <div class="log-form-label-container">
-      <label for="time" class="log-form-label">Time of Day</label>
-      <input type="text" class="form-control" id="time" name="time" required>
-    </div>
-
-    <div class="log-form-label-container">
-      <label for="bg" class="log-form-label" >Activity(s)</label>
-      <textarea class="form-control" id="bg" name="bg" required placeholder="What did you do during this time?"></textarea>
-    </div>
-
-    <div class="log-form-label-container">
-      <label for="boost" class="log-form-label">Confidant / Social Stat boosts:</label>
-      <textarea class="form-control" id="boost" name="boost" required></textarea>
-    </div>
-
-    <div class="log-form-label-container">
-      <label for="other" class="log-form-label">Other:</label>
-      <textarea class="form-control" id="other" name="other" required></textarea>
-    </div> 
-    <button type="submit" class="button-45" value="Upload"></button>
-  </form>
-</div>
-</div>
 
 <div class="logBookRight">
 
@@ -85,7 +58,7 @@
     <div class="logHere">
       <span class="hidden"><%= logs[i]._id %></span>
       <div class="log-entry">
-        <p><%= logs[i].logUserEmail %></p>
+        <p class="userEmail"><%= logs[i].logUserEmail %></p>
         <h3 class="bigFont"><%= logs[i].title %></h3>
         <span>Time of Day: </span><p><%= logs[i].time %></p>
         <span>Activity(s): </span><p><%= logs[i].bg %></p>
